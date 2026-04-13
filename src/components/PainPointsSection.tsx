@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const painPoints = [
   { icon: Clock, title: "Slow Order Management", desc: "Manual order processes causing delays and frustrated customers during peak hours.", stat: "12 min", statLabel: "avg wait time" },
   { icon: Frown, title: "Poor Customer Experience", desc: "Long wait times and miscommunication leading to negative reviews and lost repeat business.", stat: "34%", statLabel: "repeat loss" },
-  { icon: Calculator, title: "Manual Billing Errors", desc: "Human mistakes in billing causing revenue loss and customer disputes.", stat: "₹2.5L", statLabel: "lost monthly" },
+  { icon: Calculator, title: "Manual Billing Errors", desc: "Human mistakes in billing causing revenue loss and customer disputes.", stat: "$50k+", statLabel: "lost monthly" },
   { icon: Users, title: "Inefficient Staff Coordination", desc: "Lack of real-time communication between kitchen and front-of-house.", stat: "40%", statLabel: "time wasted" },
   { icon: Globe, title: "Lack of Digital Presence", desc: "No online ordering, menu, or reservation system in today's digital-first world.", stat: "65%", statLabel: "orders missed" },
 ];

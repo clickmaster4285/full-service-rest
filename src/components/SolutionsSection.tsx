@@ -57,7 +57,7 @@ const SolutionsSection = () => {
             {solutions.map((s, i) => (
               <div
                 key={s.title}
-                className="sol-card glass-card p-5 flex gap-5 group hover:border-secondary/40 transition-all duration-500 cursor-pointer"
+                className="sol-card  p-5 flex gap-5 group hover:border-secondary/40 transition-all duration-500 cursor-pointer"
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/20 to-primary/10 flex items-center justify-center shrink-0 group-hover:glow-secondary transition-all duration-500">
                   <s.icon className="w-6 h-6 text-secondary" />

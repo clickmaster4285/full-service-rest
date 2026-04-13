@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Case Studies", href: "#case-studies" },
+ 
   { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
         <a href="#home" className="text-xl md:text-2xl font-bold font-display text-gradient">
-          Clickmasters
+          FoodHub
         </a>
 
         {/* Desktop */}
