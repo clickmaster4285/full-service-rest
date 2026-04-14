@@ -11,9 +11,7 @@ const posts = [
   { img: blog1, title: "Why QR Menus Are the Future of Dining", category: "Technology", date: "Mar 2026" },
   { img: blog2, title: "5 Analytics Metrics Every Restaurant Must Track", category: "Analytics", date: "Feb 2026" },
   { img: blog3, title: "How Cloud Kitchens Are Reshaping Food Delivery", category: "Industry", date: "Jan 2026" },
-  { img: blog1, title: "Digital Transformation in the Restaurant Industry", category: "Trends", date: "Dec 2025" },
-  { img: blog2, title: "Reducing Food Waste with Smart Inventory Systems", category: "Operations", date: "Nov 2025" },
-  { img: blog3, title: "Building Customer Loyalty Through Personalization", category: "Marketing", date: "Oct 2025" },
+ 
 ];
 
 const BlogSection = () => {

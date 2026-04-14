@@ -6,16 +6,17 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
-  { name: "Rajesh Kumar", role: "Owner, Spice Garden", text: "FoodHub transformed our restaurant operations. Order errors dropped by 80% and our revenue grew 35% in just 3 months.", rating: 5 },
-  { name: "Priya Sharma", role: "Manager, Urban Bites", text: "The QR ordering system is a game-changer. Customers love the speed and we've reduced wait times dramatically.", rating: 5 },
-  { name: "Ahmed Khan", role: "Chef & Owner, Flame Grill", text: "Real-time kitchen displays and analytics helped us optimize our menu and reduce food waste by 40%.", rating: 5 },
-  { name: "Sarah Chen", role: "Director, NoodleBox Chain", text: "Scaling from 2 to 8 locations was seamless with FoodHub' cloud system. Incredible support team.", rating: 5 },
+  { name: "James Wilson", role: "Owner, The Golden Spoon", text: "FoodHub transformed our restaurant operations. Order errors dropped by 80% and our revenue grew 35% in just 3 months.", rating: 5 },
+  { name: "Emma Thompson", role: "Manager, Urban Bites", text: "The QR ordering system is a game-changer. Customers love the speed and we've reduced wait times dramatically.", rating: 5 },
+  { name: "Michael Anderson", role: "Chef & Owner, Flame Grill", text: "Real-time kitchen displays and analytics helped us optimize our menu and reduce food waste by 40%.", rating: 5 },
+  { name: "Sarah Mitchell", role: "Director, NoodleBox Chain", text: "Scaling from 2 to 8 locations was seamless with FoodHub's cloud system. Incredible support team.", rating: 5 },
 ];
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -31,8 +32,26 @@ const TestimonialsSection = () => {
     }
   }, [current]);
 
-  const prev = () => setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length);
-  const next = () => setCurrent((p) => (p + 1) % testimonials.length);
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
+  const prev = () => {
+    setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const next = () => {
+    setCurrent((p) => (p + 1) % testimonials.length);
+  };
 
   const t = testimonials[current];
 

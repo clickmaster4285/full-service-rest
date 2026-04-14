@@ -1,7 +1,7 @@
 import { ArrowUp } from "lucide-react";
 
 const links = {
-  Company: ["About", "Careers", "Blog", "Contact"],
+  Company: ["About", "Solutions", "Blog", "Contact"],
   Support: ["Help Desk", "Onboarding", "API Docs", "Status"],
   Resources: ["Case Studies", "Partners", "Webinars", "Downloads"],
 };
